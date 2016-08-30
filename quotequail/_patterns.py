@@ -3,11 +3,12 @@
 import re
 
 REPLY_PATTERNS = [
-    u'^On (.*) wrote:$', # apple mail/gmail reply
-    u'^Am (.*) schrieb (.*):$', # German
-    u'^Le (.*) a écrit :$', # French
-    u'El (.*) escribió:$', # Spanish
-    u'([0-9]{4}/[0-9]{1,2}/[0-9]{1,2}) (.* <.*@.*>)$', # gmail (?) reply
+    u'^On (.*) wrote:$',  # apple mail/gmail reply
+    u'^Am (.*) schrieb (.*):$',  # German
+    u'^Le (.*) a écrit :$',  # French
+    u'^El (.*) escribió:$',  # Spanish
+    u'^(.*) написал\(а\):$',  # Russian
+    u'([0-9]{4}/[0-9]{1,2}/[0-9]{1,2}) (.* <.*@.*>)$',  # gmail (?) reply
 ]
 
 REPLY_DATE_SPLIT_REGEX = re.compile(r'^(.*(:[0-9]{2}( [apAP]\.?[mM]\.?)?)), (.*)?$')
